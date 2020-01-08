@@ -1,20 +1,65 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: pinball-table-hurd
 Source: <https://github.com/rzr/pinball-table-hurd>
+ 
+Files: data/hurd/bump.wav
+       data/hurd/bumphard.wav
+       data/hurd/bumpsoft.wav
+       data/hurd/flip.wav
+       data/hurd/gameover.wav
+       data/hurd/intro.mid
+       data/hurd/intro.ogg
+       data/hurd/loop.wav
+       data/hurd/nudge.wav
+       data/hurd/shoot.wav
+Copyright: 2001 Henrik Enqvist <henqvist@excite.com>
+License: GPL-2+
 
-Files: data/hurd/*
-
+Files: data/hurd/ModuleHurd.cpp
+       data/hurd/tiles.png 
 Copyright: 2010 Paolo Caroni <kenren89@gmail.com>
            2001 Henrik Enqvist <henqvist@excite.com>
-License: GPL-2+, CC-BY-SA-2.0, CC-BY-SA-3.0
- See data/hurd/README for more details,
- the file ModuleHurd.cpp and tiles.png are derived from the tux table,
- much of the sound are simply copied from tux table.
- 
- 
+License: GPL-2+
+
+Files: data/hurd/gnu.png
+       data/hurd/gnu.xcf
+       data/hurd/label.png
+       data/hurd/label.xcf
+Copyright: 2010 Paolo Caroni <kenren89@gmail.com>
+           2003 Free Software Foundation, Inc.
+License: CC-BY-SA-2.0
+
+Files: data/hurd/hurd.png
+       data/hurd/hurd.xcf
+Copyright: 2010 Paolo Caroni <kenren89@gmail.com>
+           1997 Stephen McCamant
+License: CC-BY-SA-3.0
+
+Files: data/hurd/floor.png
+       data/hurd/floor3.png
+       data/hurd/floor4.png
+       data/hurd/floor-room.png
+       data/hurd/floortotal.xcf
+       data/hurd/sub.png
+       data/hurd/tiles2.png
+       data/hurd/Wood.jpg
+       data/hurd/freesoftwaresong.xml
+       data/hurd/freesoftwaresong.mid
+       data/hurd/freesoftwaresong.ogg
+       data/hurd/pinball.pbl
+Copyright: 2010 Paolo Caroni <kenren89@gmail.com>
+License: GPL-2+
 
 Files: debian/*
 Copyright: 2019 Philippe Coval <rzr@users.sf.net>
+License: GPL-2+
+
+License: CC-BY-SA-2.0
+https://spdx.org/licenses/CC-BY-SA-2.0
+
+License: CC-BY-SA-3.0
+https://spdx.org/licenses/CC-BY-SA-3.0
+
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -32,3 +77,4 @@ License: GPL-2+
  On Debian systems, the complete text of the GNU General
  Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
  
+
