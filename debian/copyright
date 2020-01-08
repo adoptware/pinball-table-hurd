@@ -2,12 +2,16 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: pinball-table-hurd
 Source: <https://github.com/rzr/pinball-table-hurd>
 
-Files: *
-Copyright: <years> <put author's name and email here>
-           <years> <likewise for another author>
-License: (GFDL or Free Art or CC-BY-SA) and GPLv3 and CC-BY-SA
- See data/hurd/README
- .
+Files: data/hurd/*
+
+Copyright: 2010 Paolo Caroni <kenren89@gmail.com>
+           2001 Henrik Enqvist <henqvist@excite.com>
+License: GPL-2+, CC-BY-SA-2.0, CC-BY-SA-3.0
+ See data/hurd/README for more details,
+ the file ModuleHurd.cpp and tiles.png are derived from the tux table,
+ much of the sound are simply copied from tux table.
+ 
+ 
 
 Files: debian/*
 Copyright: 2019 Philippe Coval <rzr@users.sf.net>
