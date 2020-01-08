@@ -35,6 +35,13 @@ Copyright: 2010 Paolo Caroni <kenren89@gmail.com>
            1997 Stephen McCamant
 License: CC-BY-SA-3.0
 
+       data/hurd/freesoftwaresong.xml
+       data/hurd/freesoftwaresong.mid
+       data/hurd/freesoftwaresong.ogg
+Copyright: 2010 Paolo Caroni <kenren89@gmail.com>
+           1993 Richard M. Stallman
+License: GPL-2+
+
 Files: data/hurd/floor.png
        data/hurd/floor3.png
        data/hurd/floor4.png
@@ -43,9 +50,6 @@ Files: data/hurd/floor.png
        data/hurd/sub.png
        data/hurd/tiles2.png
        data/hurd/Wood.jpg
-       data/hurd/freesoftwaresong.xml
-       data/hurd/freesoftwaresong.mid
-       data/hurd/freesoftwaresong.ogg
        data/hurd/pinball.pbl
 Copyright: 2010 Paolo Caroni <kenren89@gmail.com>
 License: GPL-2+
@@ -76,5 +80,3 @@ License: GPL-2+
  .
  On Debian systems, the complete text of the GNU General
  Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
- 
-
