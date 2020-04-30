@@ -1,5 +1,5 @@
-pinball-table-hurd (0.0.0-0) unstable; urgency=medium
+pinball-table-hurd (0.0.20200312-1) unstable; urgency=medium
 
-  * Initial release (Closes: #948659)
+  * Initial release (Closes: #948659, #959052)
 
- -- Philippe Coval <rzr@users.sf.net>  Mon, 23 Dec 2019 23:51:35 +0100
+ -- Philippe Coval <rzr@users.sf.net>  Thu, 30 Apr 2020 17:10:52 +0200
