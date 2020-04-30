@@ -1,26 +1,27 @@
 Source: pinball-table-hurd
+Maintainer: Philippe Coval <rzr@users.sf.net>
 Section: games
 Priority: optional
-Maintainer: Philippe Coval <rzr@users.sf.net>
 Build-Depends: debhelper-compat (= 12),
- autoconf,
- automake,
- libtool,
- libltdl-dev (>= 2.2.6b),
- libsdl1.2-dev,
- pinball-dev
-Standards-Version: 4.5.0
-Homepage: https://github.com/rzr/pinball-table-hurd
-Vcs-Git: https://github.com/rzr/pinball-table-hurd.git#debian/master
+               autoconf,
+               automake,
+               libtool,
+               libltdl-dev,
+               libsdl1.2-dev,
+               pinball-dev
+Standards-Version: 4.3.0
 Vcs-Browser: https://github.com/rzr/pinball-table-hurd/tree/debian/master
+Vcs-Git: https://github.com/rzr/pinball-table-hurd.git#debian/master
+Homepage: https://github.com/rzr/pinball-table-hurd
 Rules-Requires-Root: no
 
 Package: pinball-table-hurd
-Enhances: pinball
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends},
- pinball,
- pinball-table-hurd-data (= ${source:Version})
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         pinball,
+         pinball-table-hurd-data (= ${source:Version})
+Enhances: pinball
 Description: HURD Pinball table for emilia pinball
  Another pinball table to have fun, behaviour plugin.
  The table is dedicated to GNU/Hurd project.
