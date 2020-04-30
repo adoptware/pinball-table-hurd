@@ -2,14 +2,14 @@ Source: pinball-table-hurd
 Maintainer: Philippe Coval <rzr@users.sf.net>
 Section: games
 Priority: optional
-Build-Depends: debhelper-compat (= 12),
+Build-Depends: debhelper-compat (= 13),
                autoconf,
                automake,
                libtool,
                libltdl-dev,
                libsdl2-dev,
                pinball-dev
-Standards-Version: 4.3.0
+Standards-Version: 4.5.0
 Vcs-Browser: https://github.com/rzr/pinball-table-hurd/tree/debian/master
 Vcs-Git: https://github.com/rzr/pinball-table-hurd.git#debian/master
 Homepage: https://github.com/rzr/pinball-table-hurd
