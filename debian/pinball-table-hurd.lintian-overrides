@@ -1,2 +1,2 @@
-pinball-table-hurd: package-has-unnecessary-activation-of-ldconfig-trigger
-pinball-table-hurd: spelling-error-in-copyright
+package-has-unnecessary-activation-of-ldconfig-trigger
+spelling-error-in-copyright "allow to" "allow one to"

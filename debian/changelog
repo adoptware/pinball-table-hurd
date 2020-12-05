@@ -1,5 +1,12 @@
+pinball-table-hurd (0.0.20201119-2) unstable; urgency=medium
+
+  * Team upload.
+  * Source-only upload
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 05 Dec 2020 22:56:50 +0100
+
 pinball-table-hurd (0.0.20201119-1) unstable; urgency=medium
 
-  * Initial release (Closes: #948659, #959052)
+  * Initial release (Closes: #948659)
 
- -- Philippe Coval <rzr@users.sf.net>  Thu, 19 Nov 2020 11:35:33 +0100
+ -- Philippe Coval <rzr@users.sf.net>  Fri, 20 Nov 2020 06:33:25 +0100

@@ -1,6 +1,19 @@
 #!/usr/bin/make -f
+
+include /usr/share/dpkg/pkg-info.mk
+
 export DH_VERBOSE = 1
 DEB_BUILD_MAINT_OPTIONS += hardening=+all
+
+project?=pinball-table-hurd
+sudo?=sudo
+tarball?=${CURDIR}/../${project}_${version}.orig.tar.gz
+export tarball
+
+version?=$(DEB_VERSION_UPSTREAM)
+
+default: rule/debuild
+	-sync
 
 %:
 	dh $@
@@ -20,6 +33,50 @@ override_dh_auto_configure:
 #EOL
 
 override_dh_missing:
-	rm -f debian/tmp/var/games/*/*/highscores
-	rm -f debian/tmp/usr/lib/*/*/lib*.a
-	dh_missing --fail-missing
+	dh_missing --list-missing
+
+${tarball}:
+	 tar cvfz "$@" \
+--transform "s|^./|${project}-${version}/|" \
+--exclude 'debian' --exclude-vcs \
+.
+	@ls -l $@
+
+rule/tarball: ${tarball}
+	@ls $^
+
+rule/setup: /etc/debian_version
+	${sudo} apt-get update -y
+	${sudo} apt-get install -y \
+build-essential \
+dpkg-dev \
+devscripts \
+debhelper \
+\
+autoconf \
+automake \
+libtool-bin \
+docbook-utils \
+pinball-dev \
+libsdl1.2-dev \
+# EOL
+
+rule/version:
+	@echo ${version}
+	-cat /etc/os-release
+	${CC} --version
+	${MAKE} --version
+	aclocal --version
+	autoconf --version
+	automake --version
+	libtool --version
+
+rule/debuild: debian/rules
+	@which ${@F} || ${<D}/${<F} ${@D}/setup
+	[ "" != "${tarball}" ] || ${<D}/${<F} ${@D}/tarball
+	@ls "${tarball}" 2>/dev/null || ${<D}/${<F} ${@D}/tarball
+	${<D}/${<F} ${@D}/version
+	${@F} -S -us -uc \
+|| echo "# error: Try './debian/rules rule/setup' first"
+	${@F} -S -us -uc
+	${@F} -us -uc
