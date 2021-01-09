@@ -8,7 +8,7 @@ hurddatadir = $(datadir)/pinball/hurd
 
 hurdlib_LTLIBRARIES = libModuleHurd.la
 
-INCLUDES = -I../../base -I.../../addon -I../../src
+AM_CPPFLAGS = $(shell ${pinconfig} --cflags || echo)
 
 libModuleHurd_la_LDFLAGS = -module
 libModuleHurd_la_SOURCES = ModuleHurd.cpp
