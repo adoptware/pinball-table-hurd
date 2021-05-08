@@ -14,6 +14,7 @@ channel?=edge
 snap_id?=$(shell snap info ${project} | grep '^snap-id:' | cut -d: -f2 | awk '{ print $1 }' || echo "TODO")
 
 all ?= pc
+all += pi
 
 .PRECIOUS: %.model
 
@@ -54,3 +55,6 @@ clean:
 
 pc:
 	${MAKE} gadget=$@ architecture=amd64
+
+pi:
+	${MAKE} gadget=$@ architecture=arm64
