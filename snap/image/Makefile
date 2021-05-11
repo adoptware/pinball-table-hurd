@@ -1,3 +1,11 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# ex: set tabstop=4 noexpandtab:
+# SPDX-License-Identifier: GPL-2+
+# Copyright: Philippe Coval <https://purl.org/rzr/>
+
+default: archive
+
 project?= pinball-table-hurd
 
 -include ~/bin/mk-private.mk
@@ -6,8 +14,10 @@ gadget?=pc
 base?=core
 base_version?=20
 architecture?=amd64
+channel?=${base_version}/edge
+
+export architecture
 name?=${project}-${base}${base_version}-${architecture}-${gadget}
-channel?=edge
 developer_id?=$(shell snapcraft whoami \
 	| grep 'developer-id:' | cut -d' ' -f2 \
 	|| echo "TODO: https://ubuntu.com/core/docs/custom-images")
@@ -17,24 +27,33 @@ ubuntu_image_snap_options?=
 # image_size?=3G
 # ubuntu_image_snap_options+=--image-size ${image_size}
 key?=${project}
+
 all?=version
 all+=pc
 all+=pi
 
-.PRECIOUS: \
-	%.img \
-	%.model \
-#EOL
+sudo?=sudo
 
-default: ${name}.img.gz
-	du -hs $<
 
 help:
 	snap keys
 
-
 all: ${all}
 	-sync
+
+setup/snap:
+	snap list
+	${sudo} snap install snapcraft --edge
+	${sudo} snap install ubuntu-image --edge
+	${sudo} snap refresh
+	snap list
+	snap info ${project}
+
+snap/snapcraft.yaml:
+	${@D} init
+
+archive: ${name}.img.gz
+	du -hs $<
 
 ${name}.json: ubuntu-image-${gadget}.json Makefile
 	jq -M . $<
@@ -49,16 +68,22 @@ image: ${name}.img.gz
 	du -hs $<
 
 %.img: %.model
+	-mv $@.manifest $@.manifest.prev.tmp
 	ubuntu-image snap ${ubuntu_image_snap_options} -o $@ $<
-	mv seed.manifest $@.manifest
+	sort seed.manifest | tee $@.manifest
+	rm seed.manifest
+	-diff -u $@.manifest.prev.tmp $@.manifest
 	du -hsc $@
 
 %.model: %.json timestamp Makefile
-	cat $< | snap sign -k ${key} > $@.tmp
+	jq -M . $< | snap sign -k ${key} > $@.tmp
 	mv $@.tmp $@
 
 timestamp: ${name}.json
-	sed -e "s|\"timestamp\": .*|\"timestamp\": \"$$(date -Iseconds --utc)\",|g" -i "$<"
+	jq -M . "$<" | sed \
+-e "s|\"timestamp\": .*|\"timestamp\": \"$$(date -Iseconds --utc)\",|g" \
+	| jq -M . > "$<.tmp"
+	mv "$<.tmp" "$<"
 
 clean:
 	rm -fv *~ *.img *.img.gz *.model
@@ -75,9 +100,13 @@ pc:
 pi:
 	${MAKE} gadget=$@ architecture=arm64
 
+pi3:
+	${MAKE} gadget=pi architecture=armhf
+
 version:
 	${MAKE} --version
 	ubuntu-image --version
+	snapcraft version
 	snap --version
 	jq --version
 
@@ -111,3 +140,9 @@ run/%: %.img
 	-drive file=$<,format=raw
 
 run: run/${name}
+
+
+.PRECIOUS: \
+	%.img \
+	%.model \
+#EOL
