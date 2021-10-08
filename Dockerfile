@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # SPDX-License-Identifier: GPL-2
 
-FROM debian:10
+FROM debian:11
 LABEL maintainer="Philippe Coval (rzr@users.sf.net)"
 
 ENV DEBIAN_FRONTEND noninteractive
