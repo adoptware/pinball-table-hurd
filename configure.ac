@@ -1,5 +1,5 @@
 #                                               -*- Autoconf -*-
-# SPDX-License-Identifier: GPL-2
+# SPDX-License-Identifier: GPL-2.0-only
 
 # Process this file with autoconf to produce a configure script.
 

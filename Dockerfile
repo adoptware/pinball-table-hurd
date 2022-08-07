@@ -1,6 +1,6 @@
 #!/bin/echo docker build . -f
 # -*- coding: utf-8 -*-
-# SPDX-License-Identifier: GPL-2
+# SPDX-License-Identifier: GPL-2.0-only
 
 FROM debian:11
 LABEL maintainer="Philippe Coval (rzr@users.sf.net)"
