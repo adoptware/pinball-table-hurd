@@ -1,5 +1,5 @@
 #! /bin/sh
-# SPDX-License-Identifier: GPL-2
+# SPDX-License-Identifier: GPL-2.0-only
 set -e
 set -x
 

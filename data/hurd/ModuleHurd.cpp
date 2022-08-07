@@ -1,6 +1,8 @@
 // -*- mode: C++; c-basic-offset: 2; indent-tabs-mode: nil -*-
 // #ident "$Id: ModuleGnu.cpp $"
-// SDPX-Licence-Identifier: GPL-2.0-or-later
+// SPDX-FileCopyrightText: 2010 Paolo Caroni <kenren89@gmail.com>
+// SPDX-FileCopyrightText: 2001 Henrik Enqvist <henqvist@excite.com>
+// SPDX-License-Identifier: GPL-2.0-or-later
 /***************************************************************************
                           ModuleHurd.cpp  -  description
                              -------------------

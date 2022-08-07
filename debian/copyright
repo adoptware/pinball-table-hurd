@@ -6,28 +6,56 @@ Upstream-Contact: https://github.com/rzr/pinball-table-hurd,
 Source: <https://github.com/rzr/pinball-table-hurd>
 
 Files: *
-Copyright: 2001 Henrik Enqvist <henqvist@excite.com>
-	   2019 Philippe Coval <rzr@users.sf.net>
-License: GPL-2+
+Copyright 2001 Henrik Enqvist <henqvist@excite.com>
+Copyright 2019 Philippe Coval <rzr@users.sf.net>
+SPDX-License-Identifier: GPL-2.0-or-later
 
 Files: data/hurd/bump.wav
-       data/hurd/bumphard.wav
-       data/hurd/bumpsoft.wav
+Copyright: 2007 miq PD https://commons.wikimedia.org/wiki/File:Mint_play.ogg
+License: CC-PDDC
+
+Files: data/hurd/bumphard.wav
+Copyright: 1975 Finnish Broadcasting Company, Yle Archives CC-BY-4.0 https://freesound.org/people/YleArkisto/sounds/316887/
+           2013 Zott820 CC0-1.0 https://freesound.org/people/Zott820/sounds/209578/
+           2022 Joseph Engelhardt CC-BY-4.0
+License: CC-BY-4.0
+
+Files: data/hurd/bumpsoft.wav
        data/hurd/flip.wav
-       data/hurd/gameover.wav
-       data/hurd/intro.mid
-       data/hurd/intro.ogg
-       data/hurd/loop.wav
-       data/hurd/nudge.wav
        data/hurd/shoot.wav
-Copyright: 2001 Henrik Enqvist <henqvist@excite.com>
-License: GPL-2+
+Copyright: 1975 Finnish Broadcasting Company, Yle Archives https://freesound.org/people/YleArkisto/sounds/316887/
+License: CC-BY-4.0
+
+Files: data/hurd/gameover.wav
+Copyright: 2017 myfox14 https://freesound.org/people/myfox14/sounds/382310/
+License: CC0-1.0
+
+Files: data/hurd/intro.ogg
+Copyright: 2017 mrpagliara CC-BY-3.0 https://freesound.org/people/mrpagliara/sounds/391560/
+           2022 Joseph Engelhardt
+License: CC-BY-3.0
+
+Files: data/hurd/loop.wav
+Copyright: 1975 Finnish Broadcasting Company, Yle Archives CC-BY-4.0 https://freesound.org/people/YleArkisto/sounds/316887/
+           2007 miq PD https://commons.wikimedia.org/wiki/File:Mint_play.ogg
+           2022 Joseph Engelhardt
+License: CC-BY-4.0
+      
+Files: data/hurd/nudge.wav
+Copyright: 2016 Zott820 CC0-1.0 https://freesound.org/people/Zott820/sounds/370346/
+           2022 kyles CC0-1.0 https://freesound.org/people/kyles/sounds/637820/
+           2022 Joseph Engelhardt
+License: CC-BY-4.0
+
+Files: data/hurd/up.wav
+Copyright: 2019 NeatoEnt https://freesound.org/people/NeatoEnt/sounds/458137/
+License: CC0-1.0
 
 Files: data/hurd/ModuleHurd.cpp
        data/hurd/tiles.png 
 Copyright: 2010 Paolo Caroni <kenren89@gmail.com>
            2001 Henrik Enqvist <henqvist@excite.com>
-License: GPL-2+
+License: GPL-2.0-or-later
 
 Files: data/hurd/gnu*
        data/hurd/label.*
@@ -44,7 +72,8 @@ License: CC-BY-SA-3.0
 Files: data/hurd/freesoftwaresong.*
 Copyright: 2010 Paolo Caroni <kenren89@gmail.com>
            1993 Richard M. Stallman
-License: GPL-2+
+           2022 Joseph Engelhardt
+License: GPL-2.0-or-later
 
 Files: data/hurd/floor.png
        data/hurd/floor3.png
@@ -56,11 +85,11 @@ Files: data/hurd/floor.png
        data/hurd/wood.jpg
        data/hurd/pinball.pbl
 Copyright: 2010 Paolo Caroni <kenren89@gmail.com>
-License: GPL-2+
+License: GPL-2.0-or-later
 
 Files: debian/*
 Copyright: 2019 Philippe Coval <rzr@users.sf.net>
-License: GPL-2+
+License: GPL-2.0-or-later
 
 License: CC-BY-SA-3.0
  THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE

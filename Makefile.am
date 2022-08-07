@@ -1,5 +1,5 @@
 #!/bin/automake
-# SPDX-License-Identifier: GPL-2
+# SPDX-License-Identifier: GPL-2.0-only
 
 AUTOMAKE_OPTIONS = gnu
 

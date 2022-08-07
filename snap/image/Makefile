@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 # ex: set tabstop=4 noexpandtab:
-# SPDX-License-Identifier: GPL-2+
+# SPDX-License-Identifier: GPL-2.0-or-later
 # Copyright: Philippe Coval <https://purl.org/rzr/>
 
 default: archive
