@@ -29,6 +29,7 @@ Description: HURD Pinball table for emilia pinball
 
 Package: pinball-table-hurd-data
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends}
 Description: HURD Pinball table data used by plugin
  Visual and sounds for Emilia's pinball's HURD table.
