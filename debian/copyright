@@ -7,7 +7,7 @@ Source: <https://github.com/rzr/pinball-table-hurd>
 
 Files: *
 Copyright: 2001 Henrik Enqvist <henqvist@excite.com>
-	   2019 Philippe Coval <rzr@users.sf.net>
+	   2019-2023 Philippe Coval <rzr@users.sf.net>
 License: GPL-2+
 
 Files: data/hurd/bump.wav
