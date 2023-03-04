@@ -1,3 +1,15 @@
+pinball-table-hurd (0.0.20230219-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian: Support gbp
+  * d/gbp.conf: Based on upstream tag
+  * d/control: Update standards
+  * d/control: Set Multi-Arch: foreign
+  * d/control: Set team maintenance
+  * d/copyright: Fix update-debian-copyright lintian
+
+ -- Philippe Coval <rzr@users.sf.net>  Sat, 04 Mar 2023 20:50:29 +0100
+
 pinball-table-hurd (0.0.20201119-2) unstable; urgency=medium
 
   * Team upload.
