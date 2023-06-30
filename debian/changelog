@@ -1,5 +1,11 @@
 pinball-table-hurd (0.0.20230219-1) unstable; urgency=medium
 
+  [Sylvain Beucler]
+  * Team upload.
+  * d/control: depend on SDL2-rewritten 'pinball' package
+    (Closes: #1038534)
+
+  [ Philippe Coval ]
   * New upstream release
   * debian: Support gbp
   * d/gbp.conf: Based on upstream tag
@@ -8,7 +14,7 @@ pinball-table-hurd (0.0.20230219-1) unstable; urgency=medium
   * d/control: Set team maintenance
   * d/copyright: Fix update-debian-copyright lintian
 
- -- Philippe Coval <rzr@users.sf.net>  Sat, 04 Mar 2023 20:50:29 +0100
+ -- Sylvain Beucler <beuc@debian.org>  Fri, 30 Jun 2023 14:00:26 +0200
 
 pinball-table-hurd (0.0.20201119-2) unstable; urgency=medium
 
