@@ -13,7 +13,7 @@ Build-Depends: debhelper-compat (= 13),
                pinball-dev (>= 0.3.20230219)
 Standards-Version: 4.6.2
 Vcs-Browser: https://github.com/rzr/pinball-table-hurd/tree/debian/master
-Vcs-Git: https://github.com/rzr/pinball-table-hurd.git#debian/master
+Vcs-Git: https://github.com/rzr/pinball-table-hurd.git -b debian/master
 Homepage: https://github.com/rzr/pinball-table-hurd
 Rules-Requires-Root: no
 
